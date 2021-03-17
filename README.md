@@ -2,7 +2,7 @@
 
 # 文档信息
 
-来源: forked from [amix/vimrc](https://github.com/amix/vimrc)
+forked from [amix/vimrc](https://github.com/amix/vimrc), 但是做个定制化的修改. 
 
 
 # The Ultimate vimrc
