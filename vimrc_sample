@@ -31,4 +31,15 @@ call plug#begin('~/.vim_runtime/my_plugins')
 " coc.vim 是一个为 Neovim/vim8 制作的智能提示引擎
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'vim-airline/vim-airline'
+let g:airline_theme='badwolf'
+
+Plug 'preservim/nerdcommenter'
+
+Plug 'junegunn/vim-easy-align'
+
+Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1
+
+
 call plug#end()
