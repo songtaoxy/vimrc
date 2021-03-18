@@ -1,5 +1,6 @@
 ![VIM](https://dnp4pehkvoo6n.cloudfront.net/43c5af597bd5c1a64eb1829f011c208f/as/Ultimate%20Vimrc.svg)
-
+# 最新文档
+最新文档, see[最新文档-飞书](https://qs3ie1uhnv.feishu.cn/docs/doccnAQBN5vn9EPe5mcPjGMiBTc?from=from_copylink)
 # 文档信息
 
 forked from [amix/vimrc](https://github.com/amix/vimrc), 但是做个定制化的修改. 
