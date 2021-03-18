@@ -138,7 +138,7 @@ let [s:lcmap, s:prtmaps] = ['nn <buffer> <silent>', {
 	\ 'ToggleFocus()':        ['<s-tab>'],
 	\ 'ToggleRegex()':        ['<c-r>'],
 	\ 'ToggleByFname()':      ['<c-d>'],
-	\ 'ToggleType(1)':        ['<c-f>', '<c-up>'],
+  \ 'ToggleType(1)':        ['<c-f>', '<c-up>'],
 	\ 'ToggleType(-1)':       ['<c-b>', '<c-down>'],
 	\ 'PrtExpandDir()':       ['<tab>'],
 	\ 'PrtInsert("c")':       ['<MiddleMouse>', '<insert>'],

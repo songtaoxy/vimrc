@@ -1,0 +1,31 @@
+set runtimepath+=~/.vim_runtime
+
+"execute pathogen#infect('bundle/{}', '~/.vim_runtime/my_plugins/{}')"
+"execute pathogen#infect('~/.vim_runtime/my_plugins/{}')
+
+source ~/.vim_runtime/vimrcs/basic.vim
+source ~/.vim_runtime/vimrcs/filetypes.vim
+source ~/.vim_runtime/vimrcs/plugins_config.vim
+source ~/.vim_runtime/vimrcs/extended.vim
+
+try
+source ~/.vim_runtime/vim-plug/plug.vim
+source ~/.vim_runtime/configs.vim
+catch
+endtry
+
+
+
+
+"
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+" call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim_runtime/my_plugins')
+
+" Make sure you use single quotes
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+" Plug 'tpope/vim-sensible'
+
+call plug#end()

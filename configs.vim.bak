@@ -1,0 +1,152 @@
+set number
+
+
+"""""""""
+"  j,k  "
+"""""""""
+" j k 是面对实际行的； gj,gk 是真的虚拟行的
+nnoremap k gk
+nnoremap gk k
+nnoremap j gj
+nnoremap gj j
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                    剪切板                                     "
+"                                    mac 中, 使用command x/c/v
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+vmap <Command-x> :!pbcopy<CR>
+vmap <Command-c> :w !pbcopy<CR><CR>
+
+""""""""""
+"  自动换行  "
+""""""""""
+"set nowrap
+set wrap
+
+""""""""
+"  %s  "
+""""""""
+"在substitute命令中, 修正&命令: 将& 替代 &&
+nnoremap & :&&<CR>
+xnoremap & :&&<CR>
+
+
+"共享剪切板
+set clipboard+=unnamed
+"set 
+" 文件被改动时自动载入
+set autoread
+
+
+set noeb "输入错误提示声音
+
+set ai  "强烈推介，自动缩进
+set si  "智能缩进
+
+
+"自动更新读入配置
+autocmd! bufwritepost vimrc source ~/.vim_runtime/vimrc  
+
+
+
+"""""""""""""""""""""""""
+"  window size default  "
+"""""""""""""""""
+"窗口大小设置
+set lines=30 columns=80
+" 设定行间距
+set linespace=5
+"每行多少字符
+"set textwidth=78
+set tw=78
+
+
+" 标尺
+set ruler
+
+
+"设置换行符格式
+set ffs=unix,dos,mac 
+
+
+""""""""""""""
+"  显示相关符号
+"  比如换行符等"
+""""""""""""""
+" set list
+
+set wrapmargin=1
+
+""""""""""""
+"  search  "
+""""""""""""
+"查询时非常方便，如要查找book单词，当输入到/b时，会自动找到第一
+"个b开头的单词，当输入到/bo时，会自动找到第一个bo开头的单词，依
+"次类推，进行查找时，使用此设置会快速找到答案，当你找要匹配的单词
+"时，别忘记回车
+set incsearch
+
+
+
+
+""""""""""""
+"  vim-vi  "
+""""""""""""
+"去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
+set nocompatible
+
+
+"""""""""""""
+"  history  "
+"""""""""""""
+set history=500
+
+
+
+
+""""""""""""
+"  backup  "
+""""""""""""
+"设置vim不进行自动备份
+set nobackup
+set nowritebackup
+
+
+"将undo 和备份文件统一写到.undodir文件夹中，防止其分散
+"undodir=~/.undodir
+set noundofile
+set noswapfile
+
+
+"修改一个文件后，自动进行备份，备份的文件名为原文件名加“~“后缀
+if has("vms")
+set nobackup
+else
+"set backup
+endif
+
+""""""""""
+"  自动保存  "
+""""""""""
+set autowrite
+
+
+""""""""""""""
+"  突出显示当前行&列  "
+"""""""""""""""
+" 突出显示当前行
+"set cursorline
+" 突出显示当前列
+"set cursorcolumn
+"设置光标样式为竖线vertical bar
+" Change cursor shape between insert and normal mode in iTerm2.app
+
+"if $TERM_PROGRAM =~ "iTerm2"
+"let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+"let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+"
+"
+"thisi 我的内容
+"
+"
