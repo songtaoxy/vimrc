@@ -29,17 +29,46 @@ call plug#begin('~/.vim_runtime/my_plugins')
 " Plug 'tpope/vim-sensible'
 "
 " coc.vim 是一个为 Neovim/vim8 制作的智能提示引擎
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'https://hub.fastgit.org/neoclide/coc.nvim.git'
 
 Plug 'vim-airline/vim-airline'
-let g:airline_theme='badwolf'
+let g:airline_theme='simple'
+"let g:airline_theme='badwolf'
+Plug 'https://hub.fastgit.org/vim-airline/vim-airline-themes.git'
+
 
 Plug 'preservim/nerdcommenter'
 
 Plug 'junegunn/vim-easy-align'
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 
+"Plug 'junegunn/fzf.vim'
+Plug 'https://hub.fastgit.org/junegunn/fzf.vim.git' 
+
+Plug 'https://hub.fastgit.org/airblade/vim-gitgutter.git'
+
+
+" Shougo/defx.nvim
+"if has('nvim')
+"  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+"else
+"  Plug 'Shougo/defx.nvim'
+"  Plug 'roxma/nvim-yarp'
+"  Plug 'roxma/vim-hug-neovim-rpc'
+"endif
+Plug 'https://hub.fastgit.org/Shougo/defx.nvim.git'
+Plug 'https://hub.fastgit.org/roxma/nvim-yarp.git'
+Plug 'https://hub.fastgit.org/roxma/vim-hug-neovim-rpc.git'
+
+
+Plug 'https://hub.fastgit.org/mattn/emmet-vim.git'
 
 call plug#end()
