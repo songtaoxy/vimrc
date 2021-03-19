@@ -89,7 +89,7 @@ set textwidth=78
 "个b开头的单词，当输入到/bo时，会自动找到第一个bo开头的单词，依
 "次类推，进行查找时，使用此设置会快速找到答案，当你找要匹配的单词
 "时，别忘记回车
-set incsearc
+"set incsearc
 
 
 
@@ -154,16 +154,15 @@ set autowrite
 "  突出显示当前行&列  "
 """""""""""""""
 " 突出显示当前行
-set cursorline
+"set cursorline
 " 突出显示当前列
-set cursorcolumn
+"set cursorcolumn
 "设置光标样式为竖线vertical bar
 " Change cursor shape between insert and normal mode in iTerm2.app
-
-if $TERM_PROGRAM =~ "iTerm2"
-let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
-let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
-endif
+"if $TERM_PROGRAM =~ "iTerm2"
+"let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+"let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+"endif
 
 
 """"""""""

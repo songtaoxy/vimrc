@@ -79,6 +79,20 @@ endif
 "Always show current position
 set ruler
 
+
+"""""""""""""""
+"  突出显示当前行,列   "
+"""""""""""""""
+"set cursorline
+"set cursorcolumn
+" Change cursor shape between insert and normal mode in iTerm2.app
+"if $TERM_PROGRAM =~ "iTerm2"
+"let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+"let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+"endif
+
+
+
 " Height of the command bar
 set cmdheight=1
 
@@ -139,10 +153,7 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-try
-    colorscheme desert
-catch
-endtry
+colorscheme desert
 
 set background=dark
 
