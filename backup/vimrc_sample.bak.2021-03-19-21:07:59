@@ -3,13 +3,16 @@ set runtimepath+=~/.vim_runtime
 "execute pathogen#infect('bundle/{}', '~/.vim_runtime/my_plugins/{}')"
 "execute pathogen#infect('~/.vim_runtime/my_plugins/{}')
 
-source ~/.vim_runtime/configs.vim
 source ~/.vim_runtime/vimrcs/basic.vim
 source ~/.vim_runtime/vimrcs/filetypes.vim
 source ~/.vim_runtime/vimrcs/plugins_config.vim
 source ~/.vim_runtime/vimrcs/extended.vim
-source ~/.vim_runtime/vim-plug/plug.vim
 
+try
+source ~/.vim_runtime/vim-plug/plug.vim
+source ~/.vim_runtime/configs.vim
+catch
+endtry
 
 " python3 install path and exectale file
 " let g:python3_host_prog = '/usr/bin/python3'
@@ -23,9 +26,10 @@ let g:python3_host_prog = "/Library/Frameworks/Python.framework/Versions/3.9/bin
 " call plug#begin('~/.vim/plugged')
 call plug#begin('~/.vim_runtime/my_plugins')
 
-
-
-
+" Make sure you use single quotes
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+" Plug 'tpope/vim-sensible'
+"
 " coc.vim 是一个为 Neovim/vim8 制作的智能提示引擎
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://hub.fastgit.org/neoclide/coc.nvim.git'
@@ -35,16 +39,9 @@ let g:airline_theme='simple'
 "let g:airline_theme='badwolf'
 Plug 'https://hub.fastgit.org/vim-airline/vim-airline-themes.git'
 
-" ##########################################
-" 使用 <ctrl-/> 来注释、反注释代码
-" Plug 'preservim/nerdcommenter'
-Plug 'https://hub.fastgit.org/preservim/nerdcommenter.git'
-nmap <C-_>   <Plug>NERDCommenterToggle
-vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
 
+Plug 'preservim/nerdcommenter'
 
-" ##########################################
-" 快速对齐
 Plug 'junegunn/vim-easy-align'
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -85,10 +82,9 @@ else
   Plug 'https://hub.fastgit.org/roxma/nvim-yarp.git'
   Plug 'https://hub.fastgit.org/roxma/vim-hug-neovim-rpc.git'
 endif
-
 nmap <silent> <Leader>e :Defx <cr>
-
 autocmd FileType defx call s:defx_mappings()
+
 function! s:defx_mappings() abort
   nnoremap <silent><buffer><expr> l     <SID>defx_toggle_tree()                    " 打开或者关闭文件夹，文件
   nnoremap <silent><buffer><expr> .     defx#do_action('toggle_ignored_files')     " 显示隐藏文件
@@ -104,44 +100,11 @@ function! s:defx_toggle_tree() abort
 endfunction
 
 "Plug 'kristijanhusak/defx-icons'
+Plug 'https://hub.fastgit.org/kristijanhusak/defx-icons.git'
+
+
 Plug 'https://hub.fastgit.org/mattn/emmet-vim.git'
 
 
-" ##########################################
-" 缩进线
-" Plug 'Yggdroot/indentLine'
-Plug 'https://hub.fastgit.org/Yggdroot/indentLine.git'
-
-
-" ##########################################
-" Plug 'dense-analysis/ale'
-Plug 'https://hub.fastgit.org/dense-analysis/ale.git'
-let g:ale_sign_error = '>>'  " 自定义错误标志
-let g:ale_sign_warning = '!'  " 自定义警告标志
-" 指定修复 pep8 错误的 fixer
-let g:ale_fixers = {'python': ['remove_trailing_lines', 'trim_whitespace', 'autopep8']}
-nnoremap <C-S-l> :ALEFix<CR>  "修复语法和格式错误 ctr + shift + l"
-
-
-" ##########################################
-" Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'https://hub.fastgit.org/Xuyuanp/nerdtree-git-plugin.git'
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'✹',
-                \ 'Staged'    :'✚',
-                \ 'Untracked' :'✭',
-                \ 'Renamed'   :'➜',
-                \ 'Unmerged'  :'═',
-                \ 'Deleted'   :'✖',
-                \ 'Dirty'     :'✗',
-                \ 'Ignored'   :'☒',
-                \ 'Clean'     :'✔︎',
-                \ 'Unknown'   :'?',
-                \ }
-let g:NERDTreeGitStatusUseNerdFonts = 1 " you should install nerdfonts by yourself. default: 0
-let g:NERDTreeGitStatusShowIgnored = 1 " a heavy feature may cost much more time. default: 0
-
-
-"" ##########################################
-"
+" add new plugins
 call plug#end()
