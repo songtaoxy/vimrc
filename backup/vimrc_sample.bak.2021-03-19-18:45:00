@@ -14,8 +14,7 @@ source ~/.vim_runtime/configs.vim
 catch
 endtry
 
-" python3 install path and exectale file
-" let g:python3_host_prog = '/usr/bin/python3'
+"let g:python3_host_prog = '/usr/bin/python3'
 let g:python3_host_prog = "/Library/Frameworks/Python.framework/Versions/3.9/bin/python3.9"
 
 
@@ -57,19 +56,7 @@ Plug 'https://hub.fastgit.org/junegunn/fzf.vim.git'
 
 Plug 'https://hub.fastgit.org/airblade/vim-gitgutter.git'
 
-" ##########################################
-"                 Defx                     #
-" ##########################################
-call defx#custom#option('_', {
-      "\ 'winwidth': 30,
-      \ 'winwidth': 18,
-      \ 'split': 'vertical',
-      \ 'direction': 'topleft',
-      \ 'show_ignored_files': 0,
-      \ 'buffer_name': '',
-      \ 'toggle': 1,
-      \ 'resume': 1
-      \ })
+
 " Shougo/defx.nvim
 if has('nvim')
   "Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -82,25 +69,6 @@ else
   Plug 'https://hub.fastgit.org/roxma/nvim-yarp.git'
   Plug 'https://hub.fastgit.org/roxma/vim-hug-neovim-rpc.git'
 endif
-nmap <silent> <Leader>e :Defx <cr>
-autocmd FileType defx call s:defx_mappings()
-
-function! s:defx_mappings() abort
-  nnoremap <silent><buffer><expr> l     <SID>defx_toggle_tree()                    " 打开或者关闭文件夹，文件
-  nnoremap <silent><buffer><expr> .     defx#do_action('toggle_ignored_files')     " 显示隐藏文件
-  nnoremap <silent><buffer><expr> <C-r>  defx#do_action('redraw')
-endfunction
-
-function! s:defx_toggle_tree() abort
-    " Open current file, or toggle directory expand/collapse
-    if defx#is_directory()
-        return defx#do_action('open_or_close_tree')
-    endif
-    return defx#do_action('multi', ['drop'])
-endfunction
-
-"Plug 'kristijanhusak/defx-icons'
-Plug 'https://hub.fastgit.org/kristijanhusak/defx-icons.git'
 
 
 Plug 'https://hub.fastgit.org/mattn/emmet-vim.git'
