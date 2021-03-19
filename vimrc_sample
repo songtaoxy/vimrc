@@ -71,4 +71,6 @@ Plug 'https://hub.fastgit.org/roxma/vim-hug-neovim-rpc.git'
 
 Plug 'https://hub.fastgit.org/mattn/emmet-vim.git'
 
+
+" add new plugins
 call plug#end()

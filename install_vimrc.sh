@@ -36,4 +36,3 @@ fi
 
 
 echo "############################################################"
-echo "Installed the Ultimate Vim configuration successfully! Enjoy!!!"

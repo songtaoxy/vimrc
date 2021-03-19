@@ -169,6 +169,9 @@ set nobackup
 set nowb
 set noswapfile
 
+" Searches wrap around the end of the file.
+set nows
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
