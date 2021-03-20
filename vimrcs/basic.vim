@@ -30,7 +30,10 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Sets how many lines of history VIM has to remember
+"set guifont=Monaco:h18
+set guifont=Hack\ Nerd\ Font:h18:b
+
+"Sets how many lines of history VIM has to remember
 set history=500
 
 " Enable filetype plugins
@@ -58,6 +61,8 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
+
+
 
 " Avoid garbled characters in Chinese language windows OS
 let $LANG='en' 
@@ -149,12 +154,19 @@ set foldcolumn=1
 syntax enable 
 
 " Enable 256 colors palette in Gnome Terminal
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
+"if $COLORTERM == 'gnome-terminal'
+    "set t_Co=256
+"endif
+set t_Co=256
+
+
+"try
+    "colorscheme desert
+"catch
+"endtry
+
 
 colorscheme desert
-
 set background=dark
 
 " Set extra options when running in GUI mode
@@ -181,7 +193,8 @@ set nowb
 set noswapfile
 
 " Searches wrap around the end of the file.
-set nows
+" 是否从头重新开始搜索
+" set nows
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -15,13 +15,6 @@ source ~/.vim_runtime/vim-plug/plug.vim
 " let g:python3_host_prog = '/usr/bin/python3'
 let g:python3_host_prog = "/Library/Frameworks/Python.framework/Versions/3.9/bin/python3.9"
 
-"set guifont=Hack\ Nerd\ Font:h18
-set guifont=Hack\ Nerd\ Font:h18
-
-colorscheme desert
-set background=dark
-
-
 
 "
 " Specify a directory for plugins
@@ -32,43 +25,11 @@ call plug#begin('~/.vim_runtime/my_plugins')
 
 
 
-" """"""""""""""""""""""""""coc start"""""""""""""""""""""""""""""""""""
+
 " coc.vim 是一个为 Neovim/vim8 制作的智能提示引擎
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://hub.fastgit.org/neoclide/coc.nvim.git'
 
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
-" Make <CR> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-"Plug 'honza/vim-snippets'
-Plug 'https://hub.fastgit.org/honza/vim-snippets.git'
-" """"""""""""""""""""""""""coc end """""""""""""""""""""""""""""""""""
-
-
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'vim-airline/vim-airline'
 let g:airline_theme='simple'
 "let g:airline_theme='badwolf'
@@ -181,18 +142,6 @@ let g:NERDTreeGitStatusUseNerdFonts = 1 " you should install nerdfonts by yourse
 let g:NERDTreeGitStatusShowIgnored = 1 " a heavy feature may cost much more time. default: 0
 
 
-" ##########################################
-" Yet Another Remote Plugin Framework for Neovim
-"Plug 'roxma/nvim-yarp'
-Plug 'https://hub.fastgit.org/roxma/nvim-yarp.git'
-
-
-" ##########################################
-" This is an experimental project, trying to build a compatibility layer for neovim rpc client working on vim8. I started this project because I want to fix the vim8 support issue for nvim-completion-manager.
-"Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'https://hub.fastgit.org/roxma/vim-hug-neovim-rpc.git'
-
-
-" ##########################################
+"" ##########################################
 "
 call plug#end()

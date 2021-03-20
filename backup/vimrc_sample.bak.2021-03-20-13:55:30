@@ -15,13 +15,6 @@ source ~/.vim_runtime/vim-plug/plug.vim
 " let g:python3_host_prog = '/usr/bin/python3'
 let g:python3_host_prog = "/Library/Frameworks/Python.framework/Versions/3.9/bin/python3.9"
 
-"set guifont=Hack\ Nerd\ Font:h18
-set guifont=Hack\ Nerd\ Font:h18
-
-colorscheme desert
-set background=dark
-
-
 
 "
 " Specify a directory for plugins
@@ -181,18 +174,6 @@ let g:NERDTreeGitStatusUseNerdFonts = 1 " you should install nerdfonts by yourse
 let g:NERDTreeGitStatusShowIgnored = 1 " a heavy feature may cost much more time. default: 0
 
 
-" ##########################################
-" Yet Another Remote Plugin Framework for Neovim
-"Plug 'roxma/nvim-yarp'
-Plug 'https://hub.fastgit.org/roxma/nvim-yarp.git'
-
-
-" ##########################################
-" This is an experimental project, trying to build a compatibility layer for neovim rpc client working on vim8. I started this project because I want to fix the vim8 support issue for nvim-completion-manager.
-"Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'https://hub.fastgit.org/roxma/vim-hug-neovim-rpc.git'
-
-
-" ##########################################
+"" ##########################################
 "
 call plug#end()

@@ -68,11 +68,12 @@ set ffs=unix,dos,mac
 "窗口大小设置
 "lines大小不能设置, 否则错误.
 "set lines=30
-set columns=80
+"set columns=78
 "设定行间距
-set linespace=5
+"set linespace=5
 "每行多少字符
-set textwidth=78
+"set textwidth=78
+
 
 
 """"""""""""""
@@ -118,10 +119,6 @@ set guioptions-=T
 "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
 set nocompatible
 
-"""""""""""""
-"  history  "
-"""""""""""""
-set history=500
 
 
 """"""""""""
@@ -186,9 +183,9 @@ nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 "set Tex_FoldedEnvironments=""
 "set Tex_FoldedMisc=""
 
-map <c-f> :<c-up>
-map <c-b> :<c-down>
+"map <c-f> :<c-up>
+"map <c-b> :<c-down>
 
-" 设置空白字符的视觉提示
-set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
+ "设置空白字符的视觉提示
+"set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
 
