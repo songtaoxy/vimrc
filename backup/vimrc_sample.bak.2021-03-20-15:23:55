@@ -10,22 +10,16 @@ source ~/.vim_runtime/vimrcs/plugins_config.vim
 source ~/.vim_runtime/vimrcs/extended.vim
 source ~/.vim_runtime/vim-plug/plug.vim
 
-set tabstop=4                " 设置tab键的宽度
-set shiftwidth=4             " 换行时行间交错使用4个空格
-set autoindent               " 自动对齐
-set cindent shiftwidth=4     " 自动缩进4空格
-set smartindent              " 智能自动缩进
-set ai!                      " 设置自动缩进
-
-set guifont=Hack\ Nerd\ Font:h18
-
-colorscheme desert
-set background=dark
-
 
 " python3 install path and exectale file
 " let g:python3_host_prog = '/usr/bin/python3'
 let g:python3_host_prog = "/Library/Frameworks/Python.framework/Versions/3.9/bin/python3.9"
+
+"set guifont=Hack\ Nerd\ Font:h18
+set guifont=Hack\ Nerd\ Font:h18
+
+colorscheme desert
+set background=dark
 
 
 
@@ -105,10 +99,7 @@ let g:rainbow_active = 1
 "Plug 'junegunn/fzf.vim'
 Plug 'https://hub.fastgit.org/junegunn/fzf.vim.git' 
 
-
-" """"""""""""""  vim-gitgutter """""""""""
 Plug 'https://hub.fastgit.org/airblade/vim-gitgutter.git'
-
 
 " ##########################################
 "                 Defx                     #

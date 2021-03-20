@@ -50,6 +50,8 @@ set scrolloff=3
 set ai  "强烈推介，自动缩进
 set si  "智能缩进
 
+"this is
+
 "自动更新读入配置
 autocmd! bufwritepost vimrc source ~/.vimrc
 
@@ -172,9 +174,14 @@ set autowrite
 let g:tex_fold_enabled=0
 set foldenable              " 开始折叠
 "set foldmethod=syntax       " 设置语法折叠
+"
+"
 set foldcolumn=0            " 设置折叠区域的宽度
 setlocal foldlevel=1        " 设置折叠层数为
 set foldlevelstart=99       " 打开文件是默认不折叠代码
+
+
+" this is 
 
 "set foldclose=all          " 设置为自动关闭折叠
 "用空格键来开关折叠
