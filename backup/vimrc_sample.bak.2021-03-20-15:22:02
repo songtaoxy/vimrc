@@ -63,8 +63,6 @@ endif
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-"Plug 'sirver/ultisnips'
-Plug 'https://hub.fastgit.org/SirVer/ultisnips.git'
 "Plug 'honza/vim-snippets'
 Plug 'https://hub.fastgit.org/honza/vim-snippets.git'
 " """"""""""""""""""""""""""coc end """""""""""""""""""""""""""""""""""
