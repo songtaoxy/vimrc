@@ -22,6 +22,7 @@ set guifont=Hack\ Nerd\ Font:h18
 colorscheme desert
 set background=dark
 
+:set paste
 
 " python3 install path and exectale file
 " let g:python3_host_prog = '/usr/bin/python3'
@@ -69,10 +70,15 @@ endif
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+    
+endif
+
+
+" vim-snippets, ultisnips have been install default. 
 "Plug 'sirver/ultisnips'
-Plug 'https://hub.fastgit.org/SirVer/ultisnips.git'
+"Plug 'https://hub.fastgit.org/SirVer/ultisnips.git'
 "Plug 'honza/vim-snippets'
-Plug 'https://hub.fastgit.org/honza/vim-snippets.git'
+"Plug 'https://hub.fastgit.org/honza/vim-snippets.git'
 " """"""""""""""""""""""""""coc end """""""""""""""""""""""""""""""""""
 
 
